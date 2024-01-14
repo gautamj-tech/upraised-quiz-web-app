@@ -1,1 +1,41 @@
-{}
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "How do you judge what should be added in the next version of the app?",
+        "image": null,
+        "options": [
+          { "id": "1", "text": "Data Analysis" },
+          { "id": "2", "text": "User's Feedback" },
+          { "id": "3", "text": "Business goals" },
+          { "id": "4", "text": "All of the above" }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": 2,
+        "question": "Which type of language javascript is",
+        "image": null,
+        "options": [
+          { "id": "1", "text": "Object-Oriented" },
+          { "id": "2", "text": "Object-Based" },
+          { "id": "3", "text": "Assembly-language" },
+          { "id": "4", "text": "High-level" }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": 3,
+        "question": "What is the largest planet in our solar system?",
+        "image": "jupiter_image.jpg",
+        "options": [
+          { "id": "1", "text": "Earth" },
+          { "id": "2", "text": "Jupiter" },
+          { "id": "3", "text": "Mars" },
+          { "id": "4", "text": "Saturn" }
+        ],
+        "correctAnswer": "2"
+      }
+    ]
+  }
+  
