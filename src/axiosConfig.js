@@ -1,12 +1,12 @@
 // src/axiosConfig.js
-// axiosConfig.js
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3001', // Make sure to use the correct URL and port
-  timeout: 5000,
+  baseURL: 'https://hello-world-empty-bread-c761.gautamjain673.workers.dev',
+  timeout: 5000, // Set a timeout (milliseconds) for requests
   headers: {
     'Content-Type': 'application/json',
+    // You can add common headers here
   },
 });
 

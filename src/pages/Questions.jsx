@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bgImg from "../images/question-img.png";
+import bgImg from "../assets/images/question-img.png";
 import Result from "./Result";
 import { BsArrowRightShort } from "react-icons/bs";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -16,9 +16,14 @@ const Questions = ({
   setshowFinalResults,
 }) => {
   const [clickedOption, setClickedOption] = useState(0);
+  const [showSelectionError, setShowSelectionError] = useState(false);
 
-  //! Helper functions
   function nextHandler() {
+    if (!clickedOption) {
+      setShowSelectionError(true);
+      return;
+    }
+    setShowSelectionError(false);
     updateScore();
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
@@ -29,7 +34,7 @@ const Questions = ({
   }
 
   function updateScore() {
-    if (clickedOption === questions[currentQuestion].answer) {
+    if (clickedOption.toString() === questions[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
   }
@@ -51,10 +56,7 @@ const Questions = ({
           </div>
           <div className="bg-white mt-[19px] flex flex-col items-center rounded-[40px] h-[1000px]">
             <div className="relative">
-              <div
-                style={{ width: 90, height: 90 }}
-                className="absolute top-[-40px] left-1 p-1"
-              >
+              <div className="w-20 h-20 absolute top-[-40px] left-1 p-1">
                 <CircularProgressbar
                   className="bg-transparent text-green-400"
                   value={currentQuestion + 1}
@@ -87,8 +89,6 @@ const Questions = ({
                         }`}
                         onClick={() => {
                           setClickedOption(i + 1);
-                          // console.log(`Selected: ${i + 1}`);
-                          // console.log(`${score}`);
                         }}
                       >
                         <div className="mr-4 ">
@@ -105,11 +105,15 @@ const Questions = ({
                 })}
               </ul>
             </div>
-            {/* next button */}
-            <div>
+            <div className="flex flex-col gapy-y-2">
+              {showSelectionError && (
+                <p className="text-red-800">
+                  Please choose at least one option
+                </p>
+              )}
               <button
                 onClick={nextHandler}
-                className="bg-red-500 mt-10 flex items-center justify-center w-[290px] h-[65px] text-[30px] text-white font-semibold rounded-[50px] relative"
+                className="bg-red-500 mt-10 flex items-center justify-center w-[290px] h-[65px] text-[30px] text-white font-semibold rounded-[50px] sticky bottom-0"
               >
                 Next
                 <span className="absolute right-5 font-extrabold">

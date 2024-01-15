@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bgImg from "../images/question-img.png";
+import bgImg from "../assets/images/question-img.png";
 import ReactSpeedometer from "react-d3-speedometer";
 import SemiCircle from "../components/SemiCircle";
-import greenDot from "../images/green dot.png";
-import redDot from "../images/red dot.png";
+import greenDot from "../assets/images/green dot.png";
+import redDot from "../assets/images/red dot.png";
 
 const Result = ({
   score,
@@ -31,7 +31,7 @@ const Result = ({
         {/* score in percentage */}
         <div className="w-[150px] h-[150px] text-center rounded-full flex flex-col justify-center items-center mt-10 mb-[10px] relative">
           <div className="absolute mt-[-100px] z-2">
-            <SemiCircle finalScore={finalScore} />
+            <SemiCircle finalScore={finalScore.toFixed(2)} />
           </div>
 
           <div className="z-20">
@@ -53,7 +53,7 @@ const Result = ({
 
         {/* Number of correct and incorrect */}
         <div>
-          <ul className="relative ml-10 flex flex-col gap-5 justify-start mr-5">
+          <ul className="relative pl-10 flex flex-col gap-5 justify-start pr-5">
             <li className="text-[19px] w-[300px] h-[70px] pl-14 flex justify-left items-center bg-[#e1fcee] gap-4 rounded-[10px] font-bold">
               {/* <div className="absolute bg-transparent w-5 h-5 rounded-full left-0 ml-3 my-2 border-2 bg-[#43b479] border-none"></div> */}
               <img
@@ -83,7 +83,8 @@ const Result = ({
         <Link to="/">
           <button
             onClick={restartGame}
-            className="bg-red-500 ml-6 flex items-center justify-center w-[290px] h-[65px] text-[28px] text-white font-semibold rounded-[50px] relative mt-[40px]">
+            className="bg-red-500 ml-6 flex items-center justify-center w-[290px] h-[65px] text-[28px] text-white font-semibold rounded-[50px] relative mt-[40px]"
+          >
             Start Again
           </button>
         </Link>

@@ -1,7 +1,7 @@
 import React from "react";
-import range from "../images/third.png";
-import firstCircle from "../images/first.png";
-import secondCircle from "../images/second.png";
+import range from "../assets/images/third.png";
+import firstCircle from "../assets/images/first.png";
+import secondCircle from "../assets/images/second.png";
 
 const SemiCircle = ({ finalScore }) => {
   return (
@@ -23,7 +23,7 @@ const SemiCircle = ({ finalScore }) => {
       />
 
       <div className="w-[80px] h-[80px] bg-transparent border-[1px] rounded-full absolute top-9 left-9">
-        <div className="absolute text-[28px] border-[1px] rounded-full font-bold text-center flex items-center justify-center mx-auto w-[90px] h-[90px] ml-[-6.4px] mt-[-9.0px]  z-[90]">
+        <div className="absolute text-xl border-[1px] rounded-full font-bold text-center flex items-center justify-center mx-auto w-[90px] h-[90px] ml-[-6.4px] mt-[-9.0px]  z-[90]">
           {finalScore}%
         </div>
       </div>

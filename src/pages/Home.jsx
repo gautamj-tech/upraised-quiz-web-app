@@ -1,5 +1,5 @@
 import React from "react";
-import upraisedLogo from "../images/upraised-img.png";
+import upraisedLogo from "../assets/images/upraised-img.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
