@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Your Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![React Version](https://img.shields.io/badge/react-v17.0.2-blue.svg)](https://reactjs.org/)
+[![Cloudflare Pages](https://img.shields.io/badge/deployed%20on-Cloudflare%20Pages-orange.svg)](https://upraised-quiz.pages.dev/)
+[![Serverless](https://img.shields.io/badge/serverless%20with-Cloudflare%20Workers-orange.svg)](https://hello-world-empty-bread-c761.gautamjain673.workers.dev)
 
-## Available Scripts
+## Overview
+Quiz web app for evaluating the users in various skill sets. The app will ask the users a set of questions and will
+provide them a score at the end.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Quiz Interface:** Users can interact with the quiz interface to answer questions.
+- **Score Calculation:** The application calculates and displays the user's score upon quiz completion.
+- **Timer:** A timer tracks the time taken by the user to complete the quiz.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React:** JavaScript library for building user interfaces.
+- **API Integration:** Fetching questions and submitting answers using APIs.
 
-### `npm test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Use `npm run dev` to start the development server.
+5. Access the application via `http://localhost:3000` in your web browser.
 
-### `npm run build`
+### Cloudflare Workers
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Running a serverless. Which return question, answers, options and images
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+- [Cloudflare Pages](https://upraised-quiz.pages.dev/) - Global edge deployment for websites.
+- [Cloudflare Workers](https://hello-world-empty-bread-c761.gautamjain673.workers.dev) - Serverless functions at the edge.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
